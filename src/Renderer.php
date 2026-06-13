@@ -3,8 +3,8 @@
 namespace Air\View\Mustache;
 
 use Air\View\Renderer as BaseRenderer;
-use Mustache_Loader_FilesystemLoader;
-use Mustache_Engine;
+use Mustache\Loader\FilesystemLoader;
+use Mustache\Engine;
 
 class Renderer extends BaseRenderer
 {
@@ -27,13 +27,13 @@ class Renderer extends BaseRenderer
     public function render($file, array $data)
     {
         if (!is_null($this->cacheDir)) {
-            $mustache = new Mustache_Engine([
+            $mustache = new Engine([
                 'cache' => $this->cacheDir,
-                'partials_loader' => new Mustache_Loader_FilesystemLoader($this->partialsDir)
+                'partials_loader' => new FilesystemLoader($this->partialsDir)
             ]);
         } else {
-            $mustache = new Mustache_Engine([
-                'partials_loader' => new Mustache_Loader_FilesystemLoader($this->partialsDir)
+            $mustache = new Engine([
+                'partials_loader' => new FilesystemLoader($this->partialsDir)
             ]);
         }
 
