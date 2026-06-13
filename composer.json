@@ -1,16 +1,18 @@
 {
-    "name": "air-php/view-mustache",
-    "type": "library",
-    "description": "A mustache implementation of an Air view renderer.",
-    "require": {
-        "php": "^8.5",
-        "phpunit/phpunit": "^12",
-        "air-php/view": "^0.3",
-        "mustache/mustache": "^2.14 || ^3"
-    },
-    "autoload": {
-        "psr-4": {
-            "Air\\View\\Mustache\\": "src/"
-        }
+  "name": "air-php/view-mustache",
+  "type": "library",
+  "description": "A mustache implementation of an Air view renderer.",
+  "require": {
+    "php": "^8.5",
+    "air-php/view": "^0.3",
+    "mustache/mustache": "^2.14 || ^3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Air\\View\\Mustache\\": "src/"
     }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^12"
+  }
 }
